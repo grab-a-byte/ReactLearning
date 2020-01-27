@@ -1,0 +1,32 @@
+.table, th, td{
+    border: 1px solid black;
+    text-align: center;
+    padding: 5px;
+}
+
+.github-user-details{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    columns: 30% 70%;
+}
+
+.user-avatar{
+    max-width: 100%; 
+}
+
+.left-column{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.right-column{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+h1,h2,h3,h4{
+    text-align: center;
+}
