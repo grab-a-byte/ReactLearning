@@ -18,11 +18,14 @@ export class GithubSearchResults extends React.Component {
         }
         let repos = <></>;
         if (Array.isArray(this.props.repos) && this.props.repos.length) {
-            repos = this.props.repos.map(item => {
+            repos = this.props.repos.map(item => {              
                 return (
-                    <div>
+                    <div className="repo" key={item.id}>
                         <p>{item.owner.login}/{item.name}</p>
-                        <img className="userImage" src={item.owner.avatar_url} alt="" />
+                        <a href={`/repos/${item.owner.login}/${item.name}`} >
+                            <img className="userImage" src={item.owner.avatar_url} alt="" />
+                        </a>
+                        <img className="language-logo" src={`/images/${item.language}.png`} alt={item.language ?? "Undefined Lang"} />
                     </div>
                 )
             })

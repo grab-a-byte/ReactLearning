@@ -1,10 +1,10 @@
 import Axios from 'axios'
 
 export class GithubUserService{
-    baseUrl = ""
+    baseUrl = "https://api.github.com"
 
     async getUserRepositories(userLogin){
-        var result = await Axios.get(`https://api.github.com/users/${userLogin}/repos`);
+        var result = await Axios.get(`${this.baseUrl}/users/${userLogin}/repos`);
         if (result.status !== 200){
             return []
         } else { 

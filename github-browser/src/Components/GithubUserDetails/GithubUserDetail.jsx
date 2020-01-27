@@ -50,27 +50,30 @@ export class GithubUserDetails extends React.Component {
         -${userJoinDate.getFullYear()}`.trim();
 
         return (
-            <div className="github-user-details">
-                <div className="left-column">
-                    <img src={this.state.user.avatar_url} alt="no-avatar" className='user-avatar' />
-                    <h3>Joined Github:- {joinDateDisplay}</h3>
-                </div>
-                <div className='right-column'>                    
-                    <h2> GithubName:- {this.state.user.login}</h2>
-                    { this.state.user.name ? <h2> Name:- {this.state.user.name}</h2> : ""}
-                    <table>
-                        <thead>
-                            <tr>
-                                <th> Repo Name </th>
-                                <th> Created At </th>
-                                <th> Updated At </th>
-                                <th> Open Issue Count </th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {tableRows}
-                        </tbody>
-                    </table>
+            <div>
+                <a href="/">Return Home</a>
+                <div className="github-user-details">
+                    <div className="left-column">
+                        <img src={this.state.user.avatar_url} alt="no-avatar" className='user-avatar' />
+                        <h3>Joined Github:- {joinDateDisplay}</h3>
+                    </div>
+                    <div className='right-column'>
+                        <h2> GithubName:- {this.state.user.login}</h2>
+                        {this.state.user.name ? <h2> Name:- {this.state.user.name}</h2> : ""}
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th> Repo Name </th>
+                                    <th> Created At </th>
+                                    <th> Updated At </th>
+                                    <th> Open Issue Count </th>
+                                </tr>
+                            </thead>``
+                            <tbody>
+                                {tableRows}
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         )
